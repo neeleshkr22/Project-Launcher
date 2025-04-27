@@ -20,17 +20,18 @@ async function main() {
 
   const projectRoot = path.resolve(process.cwd(), response.projectName);
 
-  await copy(path.join(__dirname, 'template', 'frontend'), path.join(projectRoot, 'frontend'));
-  console.log('✅ Frontend ready!');
+  
+  await copy(path.join(__dirname, 'template', 'client'), path.join(projectRoot, 'client'));
+  console.log('✅ Frontend (client) ready!');
 
 
-  await copy(path.join(__dirname, 'template', 'backend'), path.join(projectRoot, 'backend'));
-  console.log('✅ Backend ready!');
+  await copy(path.join(__dirname, 'template', 'server'), path.join(projectRoot, 'server'));
+  console.log('✅ Backend (server) ready!');
 
   console.log(`\n🎉 All Done! Now:\n`);
   console.log(`cd ${response.projectName}`);
-  console.log(`cd frontend && npm install`);
-  console.log(`cd backend && npm install`);
+  console.log(`cd client && npm install`);
+  console.log(`cd server && npm install`);
 }
 
 main().catch((err) => {
