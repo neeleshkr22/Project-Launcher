@@ -15,5 +15,5 @@ Includes:
 Use **npx** to quickly scaffold your project:
 
 ```bash
-npx create-project-launcher@ver-1.0.1 my-project
+npx create-project-launcher my-project
 
